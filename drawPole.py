@@ -1,6 +1,13 @@
-from graphics import *
-
-win = GraphWin('Draft', 500, 500) # give title and dimensions
+# graphics.py
+"""
+This is a function to be used with graphics.py
+This function is made to attempt to automate the creation of Single Line
+Diagrams which show the layout of utility poles.
+Inputs:
+  poleLoc - an array with an [x,y] coordinate of the center of the pole to be
+            drawn.
+  poleSize - an integer describing the radius of the pole.
+"""
 
 def drawPole(poleLoc,poleSize):
     pole = Circle(Point(poleLoc[0],poleLoc[1]), poleSize) # set center and radius
@@ -16,14 +23,3 @@ def drawPole(poleLoc,poleSize):
     line.setWidth(2)
     line.setFill("black")
     line.draw(win)
-
-poleLoc = (100,100)
-poleSize = 20
-drawPole(poleLoc, poleSize)
-drawPole([150,150],20)
-drawPole([200,200],20)
-drawPole([250,250],20)
-drawPole([300,300],20)
-
-
-win.getMouse()
