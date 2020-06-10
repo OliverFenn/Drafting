@@ -9,7 +9,7 @@ Inputs:
   poleSize - an integer describing the radius of the pole.
   win - the window to draw in
 """
-
+from graphics import *
 def drawPole(poleLoc,poleSize,win):
     pole = Circle(Point(poleLoc[0],poleLoc[1]), poleSize) # set center and radius
     pole.setWidth(2)
