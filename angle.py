@@ -26,8 +26,8 @@ def angle(backPole,pole,forwardPole):
         y = rho * np.sin(phi)
         return(x, y)
 
-    vec1 = [pole2[0]-pole1[0],pole2[1]-pole1[1]]
-    vec2 = [pole3[0]-pole2[0],pole3[1]-pole2[1]]
+    vec1 = [pole[0]-backPole[0],pole[1]-backPole[1]]
+    vec2 = [forwardPole[0]-pole[0],forwardPole[1]-pole[1]]
     vec1Pol = cart2pol(vec1[0],vec1[1])
     vec2Pol = cart2pol(vec2[0],vec2[1])
     angle = vec2Pol[1]-vec1Pol[1]
